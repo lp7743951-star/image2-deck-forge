@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image 2 Deck Forge"
+  short_description: "Forge image-first decks from reusable styles"
+  default_prompt: "Use $image2-deck-forge to turn this source into a coherent image-first deck using the best matching saved style."
