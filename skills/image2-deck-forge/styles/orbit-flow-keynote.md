@@ -124,4 +124,3 @@ A light business-tech keynote system with a cropped blue orbital vortex, translu
 - 封面书法不会污染内页，深蓝总结区的文字清晰。
 - 公开样例不含来源品牌、日期、地点、二维码、联络信息或真实报名指令。
 - 每个生成文件是一个独立页面，没有外沿黑框，没有裁切正文，没有伪造数据。
-
