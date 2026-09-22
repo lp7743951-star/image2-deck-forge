@@ -10,6 +10,15 @@ STYLES = ROOT / "styles"
 CATALOG = STYLES / "catalog.md"
 SKILL = ROOT / "SKILL.md"
 
+BUILTIN_STYLES = {
+    "terminal-tech-magazine.md",
+    "impact-grid-editorial.md",
+    "climate-impact-editorial-grid.md",
+    "french-editorial-commerce.md",
+    "aubergine-semantic-future.md",
+    "orbit-flow-keynote.md",
+}
+
 REQUIRED_HEADINGS = [
     "## Identity",
     "## Use",
@@ -34,14 +43,19 @@ def main() -> int:
     errors: list[str] = []
     style_files = sorted(p for p in STYLES.glob("*.md") if p.name != "catalog.md")
 
-    if len(style_files) != 5:
-        errors.append(f"expected 5 built-in styles, found {len(style_files)}")
+    style_names = {path.name for path in style_files}
+    for missing in sorted(BUILTIN_STYLES - style_names):
+        errors.append(f"missing built-in style: {missing}")
 
     catalog_text = CATALOG.read_text(encoding="utf-8") if CATALOG.exists() else ""
     skill_text = SKILL.read_text(encoding="utf-8") if SKILL.exists() else ""
 
     if "styles/catalog.md" not in skill_text:
         errors.append("SKILL.md must route style selection through styles/catalog.md")
+
+    for linked_name in re.findall(r"\]\(([a-z0-9-]+\.md)\)", catalog_text):
+        if linked_name not in style_names:
+            errors.append(f"catalog.md: broken style link to {linked_name}")
 
     for path in style_files:
         text = path.read_text(encoding="utf-8")

@@ -3,10 +3,10 @@
 > **把文档锻造成一套有灵魂、有秩序、有电影感的视觉演示。**  
 > Turn raw documents into cinematic, image-first presentations with a locked visual language.
 
-![五套内置视觉系统 / Five built-in visual systems](https://raw.githubusercontent.com/lp7743951-star/image2-deck-forge/main/assets/style-atlas.png)
+![六套内置视觉系统 / Six built-in visual systems](https://raw.githubusercontent.com/lp7743951-star/image2-deck-forge/main/assets/style-atlas-six.png)
 
 [![Codex Skill](https://img.shields.io/badge/Codex-Skill-111111)](skills/image2-deck-forge/SKILL.md)
-[![Visual Systems](https://img.shields.io/badge/Visual%20Systems-5-5f2d66)](skills/image2-deck-forge/styles/catalog.md)
+[![Visual Systems](https://img.shields.io/badge/Visual%20Systems-6-5f2d66)](skills/image2-deck-forge/styles/catalog.md)
 [![Renderer](https://img.shields.io/badge/Renderer-Image%202-20c997)](#工作方式--how-it-works)
 [![License](https://img.shields.io/badge/License-MIT-f4c95d)](LICENSE)
 
@@ -17,7 +17,7 @@ Image 2 Deck Forge is a reusable Codex skill that extracts the argument, locks o
 **不是随机套模板，不是十二张互不认识的 AI 图片，也不是披着设计外衣的信息堆积。**  
 No theme roulette. No identity drift. No decorative AI wallpaper pretending to be visual reasoning.
 
-## 五套视觉系统｜Five Visual Systems
+## 六套视觉系统｜Six Visual Systems
 
 | 视觉系统 | 中文定位 | Best for |
 |---|---|---|
@@ -26,6 +26,7 @@ No theme roulette. No identity drift. No decorative AI wallpaper pretending to b
 | Climate Impact Editorial Grid | 环境证据与瑞士网格的结合 | Climate, ESG, sustainability |
 | French Editorial Commerce | 法式商业杂志与高质感产品叙事 | Fashion, retail, beauty, lifestyle |
 | Aubergine Semantic Future | 拒绝机器人套图的语义未来主义 | AI futures, transformation, concepts |
+| Orbit Flow Keynote | 白底星环、紫橙流光与清晰商务表达 | AI workshops, product keynotes, business posters |
 
 ### 01 · Terminal Tech Magazine｜终端科技杂志
 
@@ -63,9 +64,30 @@ Cream paper, condensed display type, serif contrast, tactile imagery, and taste 
 
 ![Aubergine Semantic Future](https://raw.githubusercontent.com/lp7743951-star/image2-deck-forge/main/assets/previews/aubergine-semantic-future.png)
 
-这是本次重构加入的主打新风格：深紫茄色、象牙白与淡金、纪念碑式大字，以及真正从页面命题中选择的语义图像。机器人和机械手默认限量使用。
+深紫茄色、象牙白与淡金、纪念碑式大字，以及真正从页面命题中选择的语义图像。机器人和机械手默认限量使用。
 
-The signature new system: deep plum, ivory and pale gold, monumental type, and imagery chosen from the meaning of the claim. Robots are rationed.
+Deep plum, ivory and pale gold, monumental type, and imagery chosen from the meaning of the claim. Robots are rationed.
+
+### 06 · Orbit Flow Keynote｜星环流光 · NEW
+
+![星环流光横版示例 / Orbit Flow landscape preview](https://raw.githubusercontent.com/lp7743951-star/image2-deck-forge/main/assets/previews/orbit-flow-keynote.png)
+
+白底、右上角裁切蓝色星环、半透明紫橙丝带、粗黑中文标题与深蓝总结区，形成清晰的商务科技表达。封面可用短书法标题；内页采用统一编号模块、细线图标和轻透卡片。
+
+A white business-tech system with a cropped blue orbital vortex, translucent violet-orange flow, bold Chinese typography, numbered modules, and a navy conclusion band. Short brush lettering is reserved for covers.
+
+支持 16:9 PPT 与 3:4 / 4:5 / 9:16 竖版信息海报：横版控制在两至三个信息点，竖版可以使用四模块。适合 AI 工作坊、产品发布、能力框架和活动介绍。
+
+Layouts adapt to landscape decks and portrait posters instead of squeezing one format into another. The public examples contain no source logos, event dates, locations, or QR codes.
+
+<details>
+<summary>展开查看 3:4 竖版示例 / Portrait preview</summary>
+
+<img src="https://raw.githubusercontent.com/lp7743951-star/image2-deck-forge/main/assets/previews/orbit-flow-keynote-portrait.png" alt="星环流光竖版四模块示例" width="480">
+
+</details>
+
+[阅读完整风格规范 / Style contract](skills/image2-deck-forge/styles/orbit-flow-keynote.md) · [示例提示词 / Example prompts](examples/orbit-flow-keynote/prompts.md)
 
 ## 它为什么不同｜Why It Is Different
 
@@ -116,6 +138,18 @@ Use $image2-deck-forge to turn this strategy document into a 12-slide deck.
 Use Aubergine Semantic Future and show me the thumbnail board first.
 ```
 
+调用新风格 / Try the new style:
+
+```text
+使用 $image2-deck-forge，调用“星环流光”（orbit-flow-keynote），
+把这份材料做成 8 页 16:9 图片型 PPT，先输出大纲和 prompts。
+
+使用 $image2-deck-forge，调用 Orbit Flow Keynote，
+生成一张 3:4 四模块业务介绍海报，不含品牌、日期或二维码。
+```
+
+风格别名 / Aliases: `Orbit Flow`、`星环流光`、`白底星环`、`紫橙流光`。
+
 ## 创建自己的风格｜Create Your Own Style
 
 1. 复制 [`styles/`](skills/image2-deck-forge/styles/) 中的一份风格文件。
@@ -135,13 +169,17 @@ python skills/image2-deck-forge/scripts/validate_style_library.py
 skills/image2-deck-forge/
 |-- SKILL.md
 |-- agents/openai.yaml
-|-- styles/                 # 五套可复用视觉系统
+|-- styles/                 # 六套可复用视觉系统
 |-- references/             # 工作流、页面类型、交付与返修规范
 `-- scripts/validate_style_library.py
 
 assets/
-|-- style-atlas.png
-`-- previews/               # 每套风格一张即时效果图
+|-- style-atlas-six.png      # 六风格总览
+|-- style-atlas.png          # 初版五风格总览，保留旧链接
+`-- previews/               # 风格效果图，含星环流光横版与竖版
+
+examples/orbit-flow-keynote/
+`-- prompts.md              # 新风格示例的共享规则与出图提示词
 ```
 
 ## 设计承诺｜Design Promise

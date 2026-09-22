@@ -1,6 +1,6 @@
 ---
 name: image2-deck-forge
-description: Create, restyle, revise, and package image-first presentations with Image 2 and reusable visual Style Locks. Use when Codex must turn a document, article, brief, webpage, or visual reference into slide images or an image-only PPTX; extract and save a presentation style; list or select saved styles; create thumbnail boards and page prompts; revise individual generated slides; or apply terminal-tech, institutional editorial, climate-impact, French commerce, or aubergine semantic-future visual systems.
+description: Create, restyle, revise, and package image-first presentations and style-driven posters with Image 2 and reusable visual Style Locks. Use when turning source material into slide images or an image-only PPTX, extracting or saving a presentation style, selecting saved styles, or revising generated pages. Includes terminal-tech, institutional editorial, climate-impact, French commerce, aubergine semantic-future, and Orbit Flow / 星环流光 visual systems.
 ---
 
 # Image 2 Deck Forge
@@ -82,6 +82,9 @@ Before Image 2 generation, confirm that:
 - `climate-impact-editorial-grid`: climate, ESG, sustainability, and environmental research.
 - `french-editorial-commerce`: fashion, lifestyle, consumer brands, and premium commerce.
 - `aubergine-semantic-future`: deep-plum future editorial with semantic image selection for AI, strategy, product, culture, and innovation.
+- `orbit-flow-keynote` / `Orbit Flow` / `星环流光` / `白底星环` / `紫橙流光`: white business-tech layouts with a cropped blue orbital vortex, violet-orange flow, bold Chinese titles, numbered modules, and a navy conclusion band. Use for workshops, AI applications, product keynotes, and portrait information posters.
+
+For Orbit Flow, read [styles/orbit-flow-keynote.md](styles/orbit-flow-keynote.md). Reflow portrait references for 16:9 slides; keep brush titles confined to covers and keep source brands, dates, and QR codes out of public samples.
 
 Do not treat `impact-grid-editorial` and `climate-impact-editorial-grid` as duplicates: use the first for broad institutional or consulting narratives and the second when climate or environmental evidence is part of the subject.
 

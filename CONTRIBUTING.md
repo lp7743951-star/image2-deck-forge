@@ -10,5 +10,5 @@ Contributions are welcome, especially new visual systems, sharper quality gates,
 4. Run `python skills/image2-deck-forge/scripts/validate_style_library.py`.
 5. Keep examples free of private data, third-party logos, and unlicensed assets.
 
-A style contribution should be meaningfully distinct, not a palette swap. Explain its use cases, image direction, negative rules, and how it differs from the existing five systems.
+A style contribution should be meaningfully distinct, not a palette swap. Explain its use cases, image direction, negative rules, and how it differs from the existing systems. The validator requires the shipped built-ins and allows additional registered styles.
 
